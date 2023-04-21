@@ -1,0 +1,182 @@
+header {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+footer{
+  background-color: black;
+  
+}
+main{
+  background-color: white;
+}
+body {
+    background-color: black;
+  color: black;
+}
+header, main {
+    margin: 0 auto;
+  }
+  .logo{
+    width: 500px;
+    height: 82px;
+    text-align: center;
+  }
+  .logo h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: white;
+  }
+  
+  nav ul {
+    margin: 30px;
+    padding: 0;
+    list-style: none;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin: 0 1rem;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .banner {
+    text-align: center;
+    border: 2px solid white;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .bestsellers ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  
+  .printer-link {
+    display: block;
+    text-align: center;
+    margin-bottom: 3rem;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+  }
+  
+  .printer-link img {
+    max-width: 100%;
+  }
+  
+  .printer-link h3, .printer-link p {
+    margin: 0;
+  }
+  
+  .reviews ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .reviews li {
+    width: calc(150% / 3);
+    padding: 10px;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+  }
+  
+  .reviews cite {
+    display: block;
+    text-align: center;
+    font-style: italic;
+  } 
+  body {
+    font-family: 'Beer money', sans-serif;
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  section{
+    background-color: white;
+  }
+  img{
+    max-height: 200px;
+  }
+  h1{
+    text-align: center;
+  }
+  h2{
+    text-align: center; 
+  }
+  .reviews {
+    margin-top: 50px;
+    display: block;
+    text-align: center;
+    margin-bottom: 3rem;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    max-height: 450px;
+  }
+
+  .review-avatar {
+    display: inline-block;
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  .review-text {
+    font-family: 'Roboto-Black', sans-serif;
+  }
+  .Ren{
+    height: 80px;
+  }
+  .Shapka ul li a {
+    text-align: center;
+    border: 2px solid white;
+    color: white;
+    padding: 10px 50px;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  .info h2{
+    text-align: left;
+    font-size: 20px;
+  }
+  .info2 h1{
+    text-align: center;
+  }
+ .map-container {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  padding: 50px;
+}
+
+.map {
+  position: absolute;
+  top: 45%;
+  left: 46%;
+  transform: translate(-49%, -50%);
+}
+  @font-face {
+    font-family: 'Roboto-Black';
+    src: url(/fonts/Roboto-Black.ttf);
+    font-weight: normal;
+    font-style: normal;
+  }
