@@ -15,6 +15,8 @@ main{
 body {
     background-color: black;
   color: black;
+  margin: 0;
+  padding: 0;
 }
 header, main {
     margin: 0 auto;
@@ -173,6 +175,9 @@ header, main {
   top: 45%;
   left: 46%;
   transform: translate(-49%, -50%);
+}
+.tochka{
+  list-style: none;
 }
   @font-face {
     font-family: 'Roboto-Black';
