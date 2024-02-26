@@ -1,99 +1,71 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
+<head>
     <meta charset="UTF-8">
-      <title>HF Принтеры</title>
-      <link rel="icon" href="img/HF.png">
-      <link rel="stylesheet" href="css/stele.css">
-      <link rel="stylesheet" type="text/css" href="css/preloders.css">
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Beer+Money&display=swap">
-    </meta>
-  </head>
-  <body>
-    <div id="page-preloader" class="preloder">
-        <div class="loader">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <form id="loginForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
 
-        </div>
-    </div>
-    <header>
-      <div class="logo">
-        <h1><img src="img/HF.png" alt="HF Принтеры">HF Принтеры</h1>
-      </div>
-      <nav class="Shapka">
-        <ul>
-          <li><a href="index.html">Главная</a></li>
-          <li><a href="katalog.html">Каталог</a></li>
-          <li><a href="indormation.html">О нас</a></li>
-          <li><a href="kontact.html">Контакты</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <section class="bestsellers">
-                <h2>Лучшие продаваемые принтеры</h2>
-                <ul>
-                  <li>
-                    <a href="#" class="printer-link">
-                      <img src="img/printer1.jpg" alt="Принтер 1">
-                      <h3>PLANTLIM</h3>
-                      <p>Цена: 10000 руб.</p>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="printer-link">
-                      <img src="img/printer2.jpg" alt="Принтер 2">
-                      <h3>HP</h3>
-                      <p>Цена: 12000 руб.</p>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="printer-link">
-                      <img src="img/printer3.jpg" alt="Принтер 3">
-                      <h3>XEROX</h3>
-                      <p>Цена: 8000 руб.</p>
-                    </a>
-                  </li>
-                </ul>
-              </section>
-            <section class="tochka">
-              <h2>Отзывы</h2>
-              <br>
-              <div class="container">
-                <img src="img/bandmember.jpg" alt="Avatar" style="width:90px">
-                <p><span>Chris Fox.</span></p>
-                <p>Хорошие принтеры, недавно покупал тут PLANTLIM </p>
-                <p>Оценка: ⭐⭐⭐⭐⭐</p>
-              </div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
 
-              <div class="container">
-                <img src="img/avatar_g2.jpg" alt="Avatar" style="width:90px">
-                <p><span>Rebecca Flex.</span></p>
-                <p>Недавно брала тут принтер от компании HP, вроде неплохой, но были проблемы с доставкой, поэтому 4 звезды</p>
-                <p>Оценка: ⭐⭐⭐⭐</p>
-              </div>
-              <br>
-          </section>  
-      </main>
-    <footer style="background-color: black; color: white; padding: 30px 0;">
-      <div style="display: flex; justify-content: space-around;">
-        <div style="width: 30%;">
-          <h3>Компания</h3>
-          <ul>
-            <li><a href="katalog.html">Каталог</a></li>
-            <li><a href="indormation.html">О нас</a></li>
-            <li><a href="kontact.html">Контакты</a></li>
-          </ul>
-        </div>
-      <div style="width: 30%;">
-        <div>
-          <h3>Следите за нами</h3>
-          <ul>
-            <li><img src="img/VK.png" alt="Иконка ВК"><a href="https://vk.com/feed">VK</a></li>
-            <li><img src="img/ТГ.png" alt="Иконка Телеграм"><a href="https://web.tlgrm.app/">Телеграм</a></li>
-          </ul>
-        </div>
-      </div>
-    </footer>
-    <script src="js/preloder.js"></script>
-  </body>
+        <button type="button" onclick="login()">Login</button>
+    </form>
+
+    <script>
+        function login() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            // Пример простой проверки данных (можете заменить на более сложную проверку)
+            if (username === 'user1' && password === 'password1') {
+                alert('Login successful for User 1');
+            } else if (username === 'user2' && password === 'password2') {
+                alert('Login successful for User 2');
+            } else {
+                alert('Invalid username or password');
+            }
+        }
+    </script>
+</body>
 </html>
