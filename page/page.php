@@ -1,4 +1,19 @@
-<!DOCTYPE html>
+<?php
+  $servername = "localhost";
+  $username = "root";
+  $password = "";
+  $dbname = "Printer";
+
+  // Создание соединения
+  $conn = mysqli_connect($servername, $username, $password, $dbname);
+
+  // Проверка соединения
+  if (!$conn) {
+      die("Connection failed: " . mysqli_connect_error());
+  }
+
+
+  ?>
 <html lang="ru">
   <head>
     <meta charset="UTF-8">
@@ -21,7 +36,7 @@
       </div>
       <nav class="Shapka">
         <ul>
-          <li><a href="page.html">Главная</a></li>
+          <li><a href="page.php">Главная</a></li>
           <li><a href="katalog.html">Каталог</a></li>
           <li><a href="indormation.html">О нас</a></li>
           <li><a href="kontact.html">Контакты</a></li>
