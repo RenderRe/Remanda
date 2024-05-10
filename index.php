@@ -1,3 +1,5 @@
+
+<html lang="ru">
 <?php
   $servername = "localhost";
   $username = "root";
@@ -7,36 +9,12 @@
   // Создание соединения
   $conn = mysqli_connect($servername, $username, $password, $dbname);
 
+
   // Проверка соединения
   if (!$conn) {
       die("Connection failed: " . mysqli_connect_error());
-  }
-
-  
-  // Проверка соединения
-      if ($_SERVER["REQUEST_METHOD"] == "POST") 
-      {
-          $username = $_POST["username"];
-          $password = $_POST["password"];
-
-          // SQL запрос для проверки наличия пользователя в базе данных
-          $sql = "SELECT * FROM User WHERE username = '$username' AND password = '$password'";
-          $result = mysqli_query($conn, $sql);
-
-          if (mysqli_num_rows($result) == 1) {
-
-              header("Location: ../page/page.php");
-          }
-          else {
-            echo '<script type="text/javascript">';
-            echo 'alert("Это всплывающее окно!");';
-            echo '</script>';
-          }
-      }
-    
+  }  
 ?>
-
-<html lang="ru">
   <head>
       <meta charset="UTF-8">
         <title>HF Принтеры</title>
@@ -56,7 +34,31 @@
           <label for="password">Пороль:</label>
           <input type="password" id="password" name="password" required><br>
 
-          <button type="submit">Войти</button>
+          <button type="submit">Войти
+              <?
+                          // Проверка соединения
+                      if ($_SERVER["REQUEST_METHOD"] == "POST") 
+                      {
+                          $username = $_POST["username"];
+                          $password = $_POST["password"];
+
+                          // SQL запрос для проверки наличия пользователя в базе данных
+                          $sql = "SELECT * FROM User WHERE username = '$username' AND password = '$password'";
+                          $result = mysqli_query($conn, $sql);
+
+                          if (mysqli_num_rows($result) == 1) {
+
+                              header("Location: ../page/page.php");
+                          }
+                          elseif (mysqli_num_rows($result) == 0) {
+                            echo '<script type="text/javascript">';
+                            echo 'alert("Логин или пороль введён неправильно попробуйте ещё раз");';
+                            echo '</script>';
+                            
+                          }
+                      }
+                  ?>
+              </button>
       </form>
     </body>
 </html>
