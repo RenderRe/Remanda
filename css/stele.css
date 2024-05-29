@@ -1,23 +1,14 @@
 header {
-    background-color: black;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
 }
-footer{
-  background-color: black;
-  
+body{
+  margin: auto;
 }
-main{
-  background-color: white;
-}
-body {
-  background-color: black;
-  color: black;
-  margin: 0;
-  padding: 0;
-}
+
+
 header, main {
     margin: 0 auto;
   }
@@ -28,7 +19,7 @@ header, main {
   }
   .logo h1 {
     font-size: 2.5rem;
-    color: white;
+
   }
   
   nav ul {
@@ -102,11 +93,7 @@ header, main {
     display: block;
     text-align: center;
     font-style: italic;
-  } 
-  body {
-    font-family: 'Beer money', sans-serif;
   }
-  
   a {
     color: inherit;
     text-decoration: none;
@@ -116,6 +103,13 @@ header, main {
   }
   img{
     max-height: 200px;
+  }
+  .imglogo{
+    max-height: 200px;
+    width: 64px;
+    height: 64px;
+    padding-top: 10px;
+    margin-bottom: -10px;
   }
   h1{
     text-align: center;
@@ -147,14 +141,6 @@ header, main {
   .Ren{
     height: 80px;
   }
-  .Shapka ul li a {
-    text-align: center;
-    border: 2px solid white;
-    color: white;
-    padding: 10px 50px;
-    text-decoration: none;
-    font-size: 18px;
-  }
   .info h2{
     padding: 20px 40px;
     text-align: center;
@@ -162,20 +148,51 @@ header, main {
   }
  .map-container {
   width: 100%;
-  height: 400px;
-  position: relative;
-  margin: 0 60px;
+  margin: 0 auto;
+  
 }
 
 .map {
-  position: absolute;
-  top: 45%;
-  left: 46%;
-  transform: translate(-49%, -50%);
+    width: 100%; /* Карта займет всю ширину контейнера */
+    max-width: 100%;
+    height: auto;
 }
-::-webkit-scrollbar {
-	width: 8px;
-}
+    ::-webkit-scrollbar {
+      width: 8px; /* Ширина скроллбара */
+      height: 8px; /* Высота скроллбара (для горизонтального скроллбара) */
+    }
+
+    /* Стиль для дорожки скроллбара */
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1; /* Цвет фона дорожки */
+      border-radius: 10px; /* Радиус скругления углов */
+    }
+
+    /* Стиль для ползунка скроллбара */
+    ::-webkit-scrollbar-thumb {
+      background: #888; /* Цвет ползунка */
+      border-radius: 10px; /* Радиус скругления углов */
+    }
+
+    /* Стиль при наведении курсора на ползунок */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555; /* Цвет ползунка при наведении */
+    }
+
+    /* Стиль для углового квадрата в нижнем правом углу (если есть) */
+    ::-webkit-scrollbar-corner {
+      background: #f1f1f1; /* Цвет фона углового квадрата */
+    }
+
+    /* Стиль для горизонтального скроллбара */
+    ::-webkit-scrollbar-horizontal {
+      height: 8px; /* Высота горизонтального скроллбара */
+    }
+
+    /* Стиль для вертикального скроллбара */
+    ::-webkit-scrollbar-vertical {
+      width: 8px; /* Ширина вертикального скроллбара */
+    }
 .tochka{
   list-style: none;
 }
